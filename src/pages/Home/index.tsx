@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 type handleSubmitType = (event: React.FormEvent) => void;
 
 export function Home() {
-  const [inputError, setInputError] = useState("");
+  const [inputError] = useState("");
 
   const [search, setSearch] = useState("");
   const navigate = useNavigate();

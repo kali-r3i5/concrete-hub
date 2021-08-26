@@ -12,9 +12,13 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
-  body, input, button {
-    font-size: 16px;
-    font-family: Roboto, sans-serif;
+  body, input, button, h1, h2, h3, a, p {
+    font-family: Railway-Light, monospace;
+  }
+
+  h1 {
+    font-size: 2.8;
+    font-weight: bold;
   }
 
   #root {

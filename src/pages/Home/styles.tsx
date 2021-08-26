@@ -3,15 +3,13 @@ import styled from "styled-components";
 export const Span = styled.span`
   text-align: center;
   font-weight: 500;
-  font-family: "Monaco";
   font-size: 60px;
-  justify-content: center;
+  justify-content: space-between;
   color: #000;
 `;
 
-export const ItalicSpan = styled.span`
-  font-family: "Raleway";
-  font-weight: 200;
+export const ItalicSpan = styled.a`
+  font-weight: lighter;
   font-style: italic;
 `;
 
