@@ -1,13 +1,22 @@
 import React from "react";
+import Loader from "react-loader-spinner";
 
-import { Container } from "./styles";
-
-const Loader: React.FC = () => {
+const LoaderComponent: React.FC = () => {
   return (
-    <Container>
-      <span />
-    </Container>
+    <div
+      style={{
+        display: "flex",
+        flex: 1,
+        paddingTop: 250,
+        width: 1000,
+        maxWidth: 1200,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Loader type="TailSpin" color="#00BFFF" height={100} width={100} />
+    </div>
   );
 };
 
-export default Loader;
+export default LoaderComponent;

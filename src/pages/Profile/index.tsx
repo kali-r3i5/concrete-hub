@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { useParams } from "react-router-dom";
-import Loader from "../../components/Loader";
 import ProfileData from "../../components/ProfileData";
 import RepoCard from "../../components/RepoCard";
 
@@ -21,6 +20,7 @@ import {
 } from "./styles";
 import { Link } from "react-router-dom";
 import Error from "../../components/Error";
+import LoaderComponent from "../../components/Loader";
 
 interface IProfileData {
   user?: APIUserInterface;
@@ -72,7 +72,7 @@ const Profile: React.FC = () => {
   }
 
   if (!data?.user || !data?.repos) {
-    return <Loader />;
+    return <LoaderComponent />;
   }
 
   return (
