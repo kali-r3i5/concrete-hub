@@ -14,24 +14,6 @@ export const Container = styled.header`
   }
 `;
 
-export const Span = styled.span`
-  flex: 2;
-  font-weight: 500;
-  font-family: "Monaco";
-  font-size: 60px;
-  color: #000;
-
-  @media (max-width: 480px) {
-    text-align: center;
-  }
-`;
-
-export const ItalicSpan = styled.span`
-  font-family: "Raleway";
-  font-weight: 200;
-  font-style: italic;
-`;
-
 export const Form = styled.form`
   flex: 1;
   display: flex;
@@ -40,9 +22,6 @@ export const Form = styled.form`
   flex-basis: 260px;
   align-items: center;
   position: relative;
-  @media (max-width: 480px) {
-    flex-direction: column;
-  }
 
   label {
     display: flex;
