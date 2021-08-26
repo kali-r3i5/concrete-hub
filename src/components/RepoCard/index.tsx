@@ -15,7 +15,14 @@ const RepoCard: React.FC<RepoCardInterface> = ({
       <Topside>
         <header>
           <h1>
-            <Link to={`/${username}/${reponame}`}>{reponame}</Link>
+            <Link
+              to={`/${username}/${reponame}`}
+              style={{
+                textDecoration: "none",
+              }}
+            >
+              {reponame}
+            </Link>
           </h1>
         </header>
 
