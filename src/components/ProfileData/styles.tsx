@@ -18,7 +18,12 @@ export const Flex = styled.div`
     > h2 {
       font-size: 2rem;
       font-weight: 300;
-      color: var(--username);
+      color: #000000;
+    }
+    > h3 {
+      font-size: 1.2rem;
+      font-weight: 200;
+      color: #5c5c5c;
     }
   }
 
@@ -76,16 +81,15 @@ export const Column = styled.ul`
     display: flex;
     align-items: center;
 
-    font-size: 1.4rem;
+    > h3 {
+      font-size: 1.2rem;
+      font-weight: 200;
+      color: #5c5c5c;
+    }
   }
 
   li + li {
     margin-top: 1rem;
-  }
-
-  span {
-    margin-left: 0.5rem;
-    overflow: hidden;
   }
 `;
 

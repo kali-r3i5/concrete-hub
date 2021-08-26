@@ -34,30 +34,35 @@ const ProfileData: React.FC<ProfileDataInterface> = ({
         {bio && (
           <li>
             <Icon src={organizationIcon} />
-            <span>{bio}</span>
+            <h3>{bio}</h3>
           </li>
         )}
-        <li>
-          <Icon src={locationIcon} />
-          <span>{followers}</span>
-        </li>
 
-        <li>
-          <Icon src={starIcon} />
-          <span>{following}</span>
-        </li>
+        {followers > 0 && (
+          <li>
+            <Icon src={locationIcon} />
+            <h3>{followers}</h3>
+          </li>
+        )}
+
+        {following > 0 && (
+          <li>
+            <Icon src={starIcon} />
+            <h3>{following}</h3>
+          </li>
+        )}
 
         {email && (
           <li>
             <Icon src={repositoryIcon} />
-            <span>{email}</span>
+            <h3>{email}</h3>
           </li>
         )}
 
-        {public_repos && (
+        {public_repos > 0 && (
           <li>
             <Icon src={followerIcon} />
-            <span>{public_repos}</span>
+            <h3>{public_repos}</h3>
           </li>
         )}
       </Column>
