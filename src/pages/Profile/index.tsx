@@ -17,7 +17,10 @@ import {
   ItalicSpan,
   SearchArea,
   RightSide,
+  ErrorSpan,
 } from "./styles";
+import { Link } from "react-router-dom";
+import Error from "../../components/Error";
 
 interface IProfileData {
   user?: APIUserInterface;
@@ -44,18 +47,28 @@ const Profile: React.FC = () => {
       const user = await userResponse.json();
       const repos = await reposResponse.json();
 
-      const shuffledRepos = repos.sort(() => 0.5 - Math.random());
-      const slicedRepos = shuffledRepos.slice(0, 6); // 6 repos
+      const sortByStars = (repos: APIRepoInterface[]) => {
+        return repos.sort((a, b) => {
+          return b.stargazers_count - a.stargazers_count;
+        });
+      };
+
+      const sortedRepos = sortByStars(repos);
 
       setData({
         user,
-        repos: slicedRepos,
+        repos: sortedRepos,
       });
     });
   }, [username]);
 
   if (data?.error) {
-    return <h1>{data.error}</h1>;
+    return (
+      <>
+        <Error />
+        <ErrorSpan>{data.error}</ErrorSpan>
+      </>
+    );
   }
 
   if (!data?.user || !data?.repos) {
@@ -67,9 +80,18 @@ const Profile: React.FC = () => {
       <Container>
         <SearchArea>
           <LeftSide>
-            <Span>
-              Github <ItalicSpan> Search</ItalicSpan>
-            </Span>
+            <Link
+              to={"/"}
+              style={{
+                textDecoration: "none",
+              }}
+            >
+              <Span>
+                Github
+                <div style={{ paddingRight: 10 }} />
+                <ItalicSpan>Search</ItalicSpan>
+              </Span>
+            </Link>
           </LeftSide>
           <RightSide>
             <Header />

@@ -1,11 +1,26 @@
 import styled from "styled-components";
-import { RiBookMarkLine } from "react-icons/ri";
 
-export const Span = styled.span`
+export const ErrorSpan = styled.span`
+  padding-top: 5rem;
+  display: flex;
+  flex: 1;
+  width: 100%;
+  justify-content: center;
   text-align: center;
   font-weight: 500;
-  font-family: "Monaco";
-  font-size: 42px;
+  font-size: 45px;
+  color: #ac53f2;
+
+  @media (max-width: 480px) {
+    text-align: center;
+  }
+`;
+
+export const Span = styled.span`
+  display: inline-flex;
+  text-align: center;
+  font-weight: 500;
+  font-size: 45px;
   color: #000;
 
   @media (max-width: 480px) {
@@ -14,8 +29,7 @@ export const Span = styled.span`
 `;
 
 export const ItalicSpan = styled.span`
-  font-family: "Raleway";
-  font-weight: 200;
+  font-weight: lighter;
   font-style: italic;
 `;
 
@@ -91,10 +105,4 @@ export const Repos = styled.div`
       grid-auto-rows: minmax(min-content, max-content);
     }
   }
-`;
-
-export const RepoIcon = styled(RiBookMarkLine)`
-  width: 1.6rem;
-  height: 1.6rem;
-  margin-right: 0.4rem;
 `;
