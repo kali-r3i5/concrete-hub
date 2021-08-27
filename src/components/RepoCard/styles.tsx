@@ -9,7 +9,7 @@ export const Container = styled.div`
 
   padding: 1.6rem;
   border-radius: 0.6rem;
-  border: 1px solid var(--border);
+  border: 0;
 
   h1 {
     color: #ac53f2;
@@ -38,7 +38,6 @@ export const Topside = styled.div`
 
   > p {
     font-size: 1.2rem;
-    color: var(--gray);
     margin: 0.8rem 0 1.6rem;
     letter-spacing: 0.1px;
   }
@@ -48,7 +47,6 @@ const iconCSS = css`
   width: 1.6rem;
   height: 1.6rem;
   flex-shrink: 0;
-  fill: var(--icon);
 `;
 
 export const RepoIcon = styled(RiBookMarkLine)`
@@ -69,7 +67,6 @@ export const Botside = styled.div`
       > span {
         font-size: 1.2rem;
         margin-left: 0.5rem;
-        color: var(--gray);
       }
     }
   }

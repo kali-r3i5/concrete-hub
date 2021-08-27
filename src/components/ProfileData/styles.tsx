@@ -12,7 +12,6 @@ export const Flex = styled.div`
       font-size: 2.6rem;
       font-weight: 600;
       line-height: 1.25;
-      color: var(--gray-dark);
     }
 
     > h2 {
@@ -66,7 +65,6 @@ export const Row = styled.ul`
 
     > span {
       font-size: 1.4rem;
-      color: var(--gray);
     }
 
     * {

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { RepoCardInterface } from "../../interfaces";
 
 import { Container, Topside, Botside, StarIcon } from "./styles";
