@@ -10,6 +10,11 @@ export const Container = styled.div`
   padding: 1.6rem;
   border-radius: 0.6rem;
   border: 1px solid var(--border);
+
+  h1 {
+    color: #ac53f2;
+    font-weight: lighter;
+  }
 `;
 
 export const Topside = styled.div`
