@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/kali-r3i5/concrete-hub/blob/master/src/assets/snapshot.png" width="600" />
+  <img src="https://github.com/kali-r3i5/concrete-hub/blob/master/src/assets/snapshot.png" width="800" />
 </p>
 <br />
 
@@ -43,7 +43,7 @@
 
 - A função `useNavigate()` provinda da lib `react-router-dom` foi utilizada para redirecionar o usuário para pagina de resultado . O parâmetro de navegação passado foi alimentado pela constante `search`, que é alterada pelo useState Hook `setSeach()` ao receber o input do usuário. Ao ser submetido invoca a função `handleSubmit()` que realiza redirecionamento .
 
-- A constante username é recebido como parâmetro pela função `useParams()` também da lib `react-router-dom`, e é passado como dependência de um useEffect Hook que realiza o `fetch()` recebendo como promise os dados de usuário e repositórios, então a resposta de usuário é tratada para caso de não encontrado e os repositórios do usuário encontrado são ordenados pelo número decrescente de estrelas pela função `sortByStars()`.
+- A constante username é recebida como parâmetro pela função `useParams()` também da lib `react-router-dom`, e é passado como dependência de um useEffect Hook que realiza o `fetch()` recebendo como promise os dados de usuário e repositórios, então a resposta de usuário é tratada para caso de não encontrado e os repositórios do usuário encontrado são ordenados pelo número decrescente de estrelas pela função `sortByStars()`.
 
 - Para a construção do Layout foi utilizado `Styled-Components` seguindo o modelo indicado ( desktop ) e tomei o cuidado de torna-lo responsivo ( mobile ) e os dados dos usuários e repositórios são renderizados dinâmicamente ( ou seja, caso parte dos dados não sejam recebidos somente os componentes com dados validos são renderizados ) .
 
@@ -73,9 +73,12 @@ E "buildar":
 
 ### `yarn build`
 
+<br/>
+
 <p align="center">
-  <img src="https://github.com/kali-r3i5/concrete-hub/blob/master/src/assets/snapshot.png" width="600" />
-  <img src="https://github.com/kali-r3i5/concrete-hub/blob/master/src/assets/profile-snapshot.png" width="600" /> 
-  <img src="https://github.com/kali-r3i5/concrete-hub/blob/master/src/assets/not-found-snapshot.png" width="600" />
-</p>
+  <img src="https://github.com/kali-r3i5/concrete-hub/blob/master/src/assets/snapshot.png" width="800" />
 <br />
+  <img src="https://github.com/kali-r3i5/concrete-hub/blob/master/src/assets/profile-snapshot.png" width="800" /> 
+<br />
+  <img src="https://github.com/kali-r3i5/concrete-hub/blob/master/src/assets/not-found-snapshot.png" width="800" />
+</p>
