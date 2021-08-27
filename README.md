@@ -1,7 +1,7 @@
-<p float="left">
-  <img src="https://github.com/kali-r3i5/concrete-hub/blob/master/src/assets/snapshot.png" width="100" />
-  <img src="https://github.com/kali-r3i5/concrete-hub/blob/master/src/assets/profile-snapshot.png" width="100" /> 
-  <img src="https://github.com/kali-r3i5/concrete-hub/blob/master/src/assets/not-found-snapshot.png" width="100" />
+<p align="center">
+  <img src="https://github.com/kali-r3i5/concrete-hub/blob/master/src/assets/snapshot.png" width="200" />
+  <img src="https://github.com/kali-r3i5/concrete-hub/blob/master/src/assets/profile-snapshot.png" width="200" /> 
+  <img src="https://github.com/kali-r3i5/concrete-hub/blob/master/src/assets/not-found-snapshot.png" width="200" />
 </p>
 <br />
 
@@ -43,28 +43,37 @@
 
 ## Quick start
 
-To run the project first:
+Para rodar o projeto:
 
 ### `git clone https://github.com/kali-r3i5/concrete-hub.git`
 
-Open the project directory:
+Abra o diretório:
 
 ### `cd concrete-hub`
 
-Install all dependencies:
+Instale as dependências:
 
 ### `yarn`
 
-Run the project:
+Para rodar o projeto:
 
 ### `yarn start`
 
-Or maybe you wanna test it:
+Para testar:
 
 ### `yarn test`
 
-To build:
+E "buildar":
 
 ### `yarn build`
 
 <br /><br />
+
+
+### Solução
+
+- A função `useNavigate()` provinda da lib `react-router-dom` foi utilizada para redirecionar o usuário para pagina de resultado . O parâmetro de navegação passado foi alimentado pela constante `search`, que é alterada pelo useState Hook `setSeach()` ao receber o input do usuário. Ao ser submetido invoca a função `handleSubmit()` que realiza redirecionamento .
+
+- A constante username é recebido como parâmetro pela função `useParams()` também da lib `react-router-dom`, e é passado como dependência de um useEffect Hook que realiza o `fetch()` recebendo como promise os dados de usuário e repositórios, então a resposta de usuário é tratada para caso de não encontrado e os repositórios do usuário encontrado são ordenados pelo número decrescente de estrelas pela função `sortByStars()`.
+
+- Para a construção do Layout foi utilizado `Styled-Components` seguindo o modelo indicado ( desktop ) e tomei o cuidado de torna-lo responsivo ( mobile ) .
