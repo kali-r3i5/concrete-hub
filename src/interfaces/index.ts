@@ -1,4 +1,5 @@
 export interface APIUserInterface {
+  company: string;
   login: string;
   username: string;
   name: string;
@@ -23,6 +24,7 @@ export interface APIRepoInterface {
 }
 
 export interface ProfileDataInterface {
+  company: string;
   username: string;
   name: string;
   followers: number;
