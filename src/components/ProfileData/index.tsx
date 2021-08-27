@@ -8,6 +8,7 @@ import followerIcon from "../../assets/follower.svg";
 import { Container, Flex, Avatar, Column, Icon } from "./styles";
 import { ProfileDataInterface } from "../../interfaces";
 const ProfileData: React.FC<ProfileDataInterface> = ({
+  company,
   username,
   name,
   followers,
@@ -33,8 +34,14 @@ const ProfileData: React.FC<ProfileDataInterface> = ({
       <Column>
         {bio && (
           <li>
-            <Icon src={organizationIcon} />
             <h3>{bio}</h3>
+          </li>
+        )}
+
+        {company && (
+          <li>
+            <Icon src={organizationIcon} />
+            <h3>{company}</h3>
           </li>
         )}
 

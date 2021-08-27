@@ -26,13 +26,7 @@ export const Topside = styled.div`
       font-size: 1.4rem;
       font-weight: 600;
       margin-left: 0.8rem;
-      color: var(--link);
       text-decoration: none;
-
-      &:focus,
-      &:hover {
-        text-decoration: underline;
-      }
     }
   }
 

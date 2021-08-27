@@ -100,6 +100,7 @@ const Profile: React.FC = () => {
         <Main>
           <LeftSide>
             <ProfileData
+              company={data.user.company}
               username={data.user.login}
               name={data.user.name}
               followers={data.user.followers}
